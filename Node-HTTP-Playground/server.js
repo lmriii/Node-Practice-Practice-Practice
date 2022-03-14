@@ -1,3 +1,7 @@
+/*
+    This is how to create an HTTP server in Node. Express will make this a lot easier. These are the basics, learn well.
+*/
+
 const http = require('http');
 
 const hostname = 'localhost';
