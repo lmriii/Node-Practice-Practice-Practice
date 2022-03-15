@@ -1,6 +1,8 @@
 const express = require('express');
 const morgan = require('morgan');
 const campsiteRouter = require('./routes/campsiteRouter');
+const promotionRouter = require('./routes/promotionRouter');
+const partnerRouter = require('./routes/partnerRouter');
 
 const hostname = 'localhost';
 const port = '4000';
@@ -14,6 +16,8 @@ app.use(express.json());
 
 // this uses express router. by getting 'campsites' as first parameter we're saying this is root path
 app.use('/campsites', campsiteRouter);
+app.use('/promotions', promotionRouter);
+app.use('/partners', partnerRouter);
 
 // THESE HAVE BEEN MOVED TO A ROUTER MODULE
 // // catchall method for all http verbs
